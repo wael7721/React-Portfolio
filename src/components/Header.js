@@ -75,10 +75,8 @@ const Header = () => {
       top={0}
       left={0}
       right={0}
-      translateY={0}
       transform={show ? "transformY(0)" : "translateY(-100%)"}
       transition= "transform 0.3s ease-in-out"
-      transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
@@ -94,7 +92,6 @@ const Header = () => {
                 <a
                   href={social.url}
                   key={social.url}
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   {" "}
@@ -105,10 +102,10 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#projects-section" onClick={handleClick}>
+              <a href="#projects-section" onClick={handleClick("projects")}>
                 Projects
               </a>
-              <a href="#contactme-section" onClick={handleClick}>
+              <a href="#contactme-section" onClick={handleClick("contactme")}>
                 Contact Me
               </a>
             </HStack>
